@@ -1,14 +1,19 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+		 pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<c:url value="/public" var="resourceURL" scope="request"/>
 <!DOCTYPE html>
 <html>
 <head lang="en">
+	<link href="<c:url value="${resourceURL}/css/style.css" />" rel="stylesheet">
 	<meta charset="UTF-8">
 	<title>Example</title>
-	<link rel="stylesheet" href= "../resources/css/style.css" />
+	<link rel="stylesheet" href= "${css}/style.css" />
 </head>
 <body>
 <div class="card">
 	<div class="image">
-		<img src="../resources/images/reg.jpg" class="image">
+		<img src="<c:url value="${resourceURL}/images/reg.jpg" />" class="image">
 	</div>
 	<a class="circle_button"></a>
 	<div class="card-content">
